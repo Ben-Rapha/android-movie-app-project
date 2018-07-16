@@ -91,9 +91,9 @@ public class DetailActivity extends AppCompatActivity {
         imageUrl.append("original/").append(movieData.getBackDrop());
         Picasso.with(getApplicationContext()).load(imageUrl.toString()).into(imageView);
         String trailerUrl = "https://api.themoviedb.org/3/movie/" +
-                movieID +"/videos?api_key=af6a7bb450028de8aefd99dec516ebb4&language=en-US";
+                movieID +"/videos?api_key=######&language=en-US";
         String reviewsUrl = "https://api.themoviedb.org/3/movie/" +
-                movieID+"/reviews?api_key=af6a7bb450028de8aefd99dec516ebb4&language=en-US&page=1";
+                movieID+"/reviews?api_key=######&language=en-US&page=1";
         TrailerAsyncTask asyncTask1 = new TrailerAsyncTask();
         ReviewAsyncTask asyncTask2  = new ReviewAsyncTask();
         asyncTask1.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,trailerUrl);
